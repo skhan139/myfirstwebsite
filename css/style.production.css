@@ -138,19 +138,19 @@ button:hover, button:focus {
           justify-content: center;
 }
 .grid > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
+  -ms-grid-rows: 1;
+  -ms-grid-columns: 1;
 }
 .grid__item {
   border: solid 3px black;
   background: rgba(6, 22, 169, 0.792);
 }
 .grid__item:last-child {
-  -ms-grid-column: 3;
+  -ms-grid-columns: 3;
       grid-column-start: 3;
   -ms-grid-column-span: 0;
   grid-column-end: 3;
-  -ms-grid-row: 1;
+  -ms-grid-rows: 1;
       grid-row-start: 1;
   -ms-grid-row-span: 2;
   grid-row-end: 3;
@@ -172,8 +172,8 @@ button:hover, button:focus {
   grid-gap: 1rem;
 }
 .container > *:nth-child(1){
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
+  -ms-grid-rows: 1;
+  -ms-grid-columns: 1;
 }
 .item{
   border: solid 3px black;
