@@ -302,7 +302,7 @@ button:hover, button:focus {
   display: inline-block;       /* Ensures each link behaves like a button */
   padding: 10px 20px;          /* Adds space inside the button */
   color: white;                /* Text color */
-  background-color: rgb(255, 255, 255);     /* Button background color */
+  background-color: white;     /* Button background color */
   border: 2px solid white;     /* Optional white border */
   border-radius: 5px;          /* Rounded corners */
   text-decoration: none;       /* Removes underline from links */
@@ -323,4 +323,111 @@ button:hover, button:focus {
   background-color: #357b70;   /* Highlight active link */
   color: white;
   border-color: #357b70;       /* Matches active background */
+}
+
+/* Card styles */
+.form-card {
+  background-color: #f8f8f8; /* Light off-white background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Internal spacing */
+  max-width: 400px; /* Limit card width */
+  margin: 50px auto; /* Center on the page with space at the top */
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+}
+
+/* Input and textarea styling */
+.form-input, .form-textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Submit button styling */
+.form-submit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #357b70; /* Match primary theme color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  background-color: #285b55; /* Darker shade on hover */
+}
+
+/* Label styling */
+.standard-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333; /* Dark text */
+}
+.code-button {
+  color: #e0b354; /* Change text color to a gold shade */
+}
+
+.button:hover {
+  background-color: #285b55;
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.code-button:hover {
+  color: #ffd700; /* Lighter gold on hover for emphasis */
+}
+/* Card styles */
+.form-card {
+  background-color: #f8f8f8; /* Light off-white background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Internal spacing */
+  max-width: 400px; /* Limit card width */
+  margin: 50px auto; /* Center on the page with space at the top */
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+}
+
+/* Input and textarea styling */
+.form-input, .form-textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Submit button styling */
+.form-submit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #357b70; /* Match primary theme color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  background-color: #285b55; /* Darker shade on hover */
+}
+
+/* Label styling */
+.standard-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333; /* Dark text */
 }

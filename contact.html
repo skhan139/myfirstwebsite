@@ -14,49 +14,36 @@
     <title>Contact Sam</title>
   </head>
   
-<body>
-   <div class="banner">
+  <body>
+    <div class="banner">
       <header class="page-header">
-        <img src="img/Unknown.jpeg" height="30px" width="30px" alt="logo" class="page-header_item">
+        <img src="img/Image 12-5-24 at 1.43 PM.jpg" height="100px" width="300px" alt="logo" class="page-header_item">
         <nav class="main-navigation page-header__item">
           <ul role="menubar" class="navigation-list">
-            <li role="presentation">
-              <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
-            </li>
-            <li role="presentation">
-              <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
-            </li>
-            <li role="presentation">
-              <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-            </li>
-            <li role="presentation">
-              <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
-            </li>
+            <li role="presentation"><a href="index.html" role="menuitem" class="navigation-list__item">Home</a></li>
+            <li role="presentation"><a href="about.html" role="menuitem" class="navigation-list__item">About</a></li>
+            <li role="presentation"><a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a></li>
+            <li role="presentation"><a href="work.html" role="menuitem" class="navigation-list__item">Work</a></li>
           </ul>
         </nav>
       </header>
     </div>
-    
-  <form action="https://formspree.io/f/xrbgjjly" method="post" id="contact-form">
+  
+    <div class="form-card">
+      <form action="https://formspree.io/f/xrbgjjly" method="post" id="contact-form">
         <label class="standard-label">Email: </label>
-        <input type="email" required>
-      
+        <input type="email" class="form-input" required>
+        
         <label class="standard-label">Telephone: </label>
-        <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
-      
+        <input type="tel" class="form-input" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+        
         <label class="standard-label">Message: </label>
-        <textarea required maxlength="240"></textarea>
-        <input type="submit" value="Send message">
-    </form>
-      
-    <footer class="page-footer">
-         <p>Find me on</p>
-         <div class="social-media">
-            <a href="https://www.instagram.com/skhan.13/?hl=en"><img src="img/instagram-svgrepo-com.svg" alt="Instagram" height="30px" width="30px"></a>
-            <a href="https://twitter.com/skhan0413"><img src="img/twitter-154-svgrepo-com.svg" alt="Twitter" height="30px" width="30px"></a>
-            <a href="https://github.com/skhan139"><img src="img/icons8-github-48.png" alt="GitHub" height="30px" width="30px"></a>
-         </div>
-     </footer>
-<script src="js/tota11y.min.js"></script>
-</body>
+        <textarea class="form-textarea" required maxlength="240"></textarea>
+        
+        <input type="submit" value="Send message" class="form-submit">
+      </form>
+    </div>
+  </body>
+  
+  
 </html>
