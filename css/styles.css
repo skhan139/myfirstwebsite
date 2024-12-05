@@ -208,3 +208,37 @@ button:hover, button:focus {
   animation-direction: alternate ;
  animation-timing-function: linear;
 }
+/* Banner styling */
+.banner {
+  background-color: black;    /* Set the entire banner background to black */
+  color: white;               /* Change text color to white for readability */
+  padding: 20px;              /* Space inside the banner */
+  border-bottom: 4px solid white; /* Optional white bottom border for contrast */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  margin-bottom: 20px;        /* Space below the banner */
+}
+.navigation-list__item {
+  display: inline-block;       /* Ensures each link behaves like a button */
+  padding: 10px 20px;          /* Adds space inside the button */
+  color: white;                /* Text color */
+  background-color: black;     /* Button background color */
+  border: 2px solid white;     /* Optional white border */
+  border-radius: 5px;          /* Rounded corners */
+  text-decoration: none;       /* Removes underline from links */
+  font-weight: 700;            /* Bold text */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  margin-right: 10px;          /* Spacing between buttons */
+}
+
+.navigation-list__item:hover {
+  background-color: white;     /* Changes background on hover */
+  color: black;                /* Changes text color on hover */
+  cursor: pointer;             /* Pointer cursor on hover */
+}
+
+.navigation-list__item--active {
+  background-color: #357b70;   /* Highlight active link */
+  color: white;
+  border-color: #357b70;       /* Matches active background */
+}
+
