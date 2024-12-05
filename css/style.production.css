@@ -314,8 +314,8 @@ button:hover, button:focus {
 }
 
 .navigation-list__item:hover {
-  background-color: white;     /* Changes background on hover */
-  color: black;                /* Changes text color on hover */
+  background-color: rgb(0, 0, 0);     /* Changes background on hover */
+  color: rgb(255, 255, 255);                /* Changes text color on hover */
   cursor: pointer;             /* Pointer cursor on hover */
 }
 
@@ -373,6 +373,7 @@ button:hover, button:focus {
 }
 .code-button {
   color: #e0b354; /* Change text color to a gold shade */
+  background-color: antiquewhite;
 }
 
 .button:hover {
