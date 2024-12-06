@@ -2,23 +2,26 @@
   --primary-color: #357b70;
   --secondary-color: #e0b354;
   --dark-grey: #2b2b2b;
-  --fontweight:700;
-  --templatecolumn: 200px 200px 200px;
-  --templaterow: 200px 200px;
+  --fontweight: 700;
+  --templatecolumn: 300px 300px 300px; 
+  --templaterow: 300px 300px; 
 }
+
 a {
   color: var(--primary-color);
 }
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  /* Sets the font size to 16px */
   line-height: 1.6;
-  /* Sets the line-height to 1.6 */}
-*{
-  box-sizing:border-box;
 }
+
+* {
+  box-sizing: border-box;
+}
+
 h1 {
   font-size: 30px;
   font-weight: var(--fontweight);
@@ -33,79 +36,87 @@ h3 {
   font-size: 18px;
   font-weight: var(--fontweight);
 }
+
 a:hover {
-  /* No underlining when hovering over a link */
   text-decoration: none;
 }
+
 a:visited {
-  /* visited link */
   color: #05676e;
 }
 
 a:active {
-  /* selected link */
   color: #489c79;
 }
-button {
-  /* overwrites browser defaults and resets the border */
+
+button, .button {
   border: none;
-  /* takes the font from the outer container */
+  display: inline-block;
   font-family: inherit;
-  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: var(--primary-color);
   color: white;
   text-decoration: none;
-  /*adds spacing to the button */
   padding: 10px;
   border-radius: 3px;
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA  */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s;
+  margin-bottom: 20px; /* Add spacing below the button */
 }
-button:hover, button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
+
+button:hover, button:focus, .button:hover, .button:focus {
   cursor: pointer;
-  /* reduces the opacity of the button to 80% */
   opacity: 0.8;
 }
+
 .button__secondary {
   background-color: var(--secondary-color);
   color: var(--dark-grey);
+  padding: 30px;
 }
+
 .profile__portrait {
   float: left;
   width: 250px;
-  margin-right:40px;
+  margin-right: 40px;
   border-radius: 50%;
 }
+
 .page-footer {
   clear: both;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
+
 .profile {
   max-width: 700px;
   margin: 0 auto;
 }
+
 .page-header {
   display: flex;
   width: 100%;
   padding: 20px;
 }
+
 .page-header__item {
   flex: 0 1 200px;
 }
+
 .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
 }
+
 .navigation-list {
   list-style-type: none;
 }
+
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
 }
+
 .grid {
   display: grid;
   grid-template-columns: var(--templatecolumn);
@@ -113,72 +124,61 @@ button:hover, button:focus {
   grid-gap: 1rem;
   justify-content: center;
 }
+
 .grid__item {
   border: solid 3px black;
   background: rgba(248, 248, 249, 0.792);
 }
-.grid__item:last-child {
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
+
 .grid__item:last-child {
   grid-column: 3 / 3;
   grid-row: 1 / 3;
 }
-.container{
+
+.container {
   display: grid;
   grid-template-columns: var(--templatecolumn);
   grid-template-rows: var(--templaterow);
   grid-gap: 1rem;
 }
-.item{
+
+.item {
   border: solid 3px rgb(255, 254, 254);
   background: rgba(6, 22, 169, 0.792);
 }
+
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
 }
-.button, button {
-  /* overwrites browser defaults */
-  /* resets the border */
-  border: none;
-  display: inline-block;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* style button */
-  background-color: var(--primary-color);
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  transition: opacity 0.2s;
-}
+
 .sun {
   animation: 4s color-change infinite alternate linear;
-}@keyframes cloud-move {
+}
+
+@keyframes cloud-move {
   from {
     transform: translate(0, 50px);
   }
@@ -186,6 +186,7 @@ button:hover, button:focus {
     transform: translate(200px, 50px);
   }
 }
+
 .cloud-front {
   animation-duration: 30s;
   animation-name: cloud-move;
@@ -193,6 +194,7 @@ button:hover, button:focus {
   animation-direction: alternate;
   animation-timing-function: linear;
 }
+
 @keyframes cloud-move-reverse {
   from {
     transform: translate(446px, 48px);
@@ -201,131 +203,86 @@ button:hover, button:focus {
     transform: translate(100px, 48px);
   }
 }
+
 .cloud-back {
-  animation-duration: 34s; 
-  animation-name: cloud-move-reverse ;
+  animation-duration: 34s;
+  animation-name: cloud-move-reverse;
   animation-iteration-count: infinite;
-  animation-direction: alternate ;
- animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
-/* Banner styling */
+
 .banner {
-  background-color: black;    /* Set the entire banner background to black */
-  color: white;               /* Change text color to white for readability */
-  padding: 20px;              /* Space inside the banner */
-  border-bottom: 4px solid white; /* Optional white bottom border for contrast */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
-  margin-bottom: 20px;        /* Space below the banner */
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-bottom: 4px solid white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
+
 .navigation-list__item {
-  display: inline-block;       /* Ensures each link behaves like a button */
-  padding: 10px 20px;          /* Adds space inside the button */
-  color: white;                /* Text color */
-  background-color: black;     /* Button background color */
-  border: 2px solid white;     /* Optional white border */
-  border-radius: 5px;          /* Rounded corners */
-  text-decoration: none;       /* Removes underline from links */
-  font-weight: 700;            /* Bold text */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
-  margin-right: 10px;          /* Spacing between buttons */
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 10px;
 }
 
 .navigation-list__item:hover {
-  background-color: white;     /* Changes background on hover */
-  color: black;                /* Changes text color on hover */
-  cursor: pointer;             /* Pointer cursor on hover */
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
 .navigation-list__item--active {
-  background-color: #357b70;   /* Highlight active link */
+  background-color: #357b70;
   color: white;
-  border-color: #357b70;       /* Matches active background */
+  border-color: #357b70;
 }
 
-/* Card styles */
-.form-card {
-  background-color: #f8f8f8; /* Light off-white background */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px; /* Internal spacing */
-  max-width: 400px; /* Limit card width */
-  margin: 50px auto; /* Center on the page with space at the top */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+table {
+  margin-top: 20px; /* Optional: Add spacing above the table for balance */
 }
 
-/* Input and textarea styling */
-.form-input, .form-textarea {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc; /* Light border */
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-/* Submit button styling */
-.form-submit {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #357b70; /* Match primary theme color */
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.form-submit:hover {
-  background-color: #285b55; /* Darker shade on hover */
-}
-
-/* Label styling */
-.standard-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #333; /* Dark text */
-}
 .code-button {
-  color: #e0b354; /* Change text color to a gold shade */
-}
-
-.button:hover {
-  background-color: #285b55;
-  transform: scale(1.05);
+  color: #e0b354;
 }
 
 .code-button:hover {
-  color: #ffd700; /* Lighter gold on hover for emphasis */
-}
-/* Card styles */
-.form-card {
-  background-color: #f8f8f8; /* Light off-white background */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px; /* Internal spacing */
-  max-width: 400px; /* Limit card width */
-  margin: 50px auto; /* Center on the page with space at the top */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+  color: #ffd700;
 }
 
-/* Input and textarea styling */
-.form-input, .form-textarea {
+.form-card {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 50px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-input,
+.form-textarea {
   display: block;
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc; /* Light border */
+  border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
 }
 
-/* Submit button styling */
 .form-submit {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #357b70; /* Match primary theme color */
+  background-color: #357b70;
   color: white;
   border: none;
   border-radius: 4px;
@@ -334,13 +291,19 @@ button:hover, button:focus {
 }
 
 .form-submit:hover {
-  background-color: #285b55; /* Darker shade on hover */
+  background-color: #285b55;
 }
 
-/* Label styling */
 .standard-label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #333; /* Dark text */
+  color: #333;
+}
+.grid__item img {
+  max-width: 100%; /* Ensures the image fits within its container */
+  height: auto; /* Maintains aspect ratio */
+  margin-bottom: 1rem; /* Adds spacing below the image */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
 }
