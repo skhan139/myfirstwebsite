@@ -326,7 +326,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .navigation-list__item--active {
   background-color: #357b70;
-  color: white;
+  color: rgb(0, 0, 0);
   border-color: #357b70;
 }
 
